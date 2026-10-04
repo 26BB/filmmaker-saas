@@ -1,6 +1,7 @@
 # 🎬 FilmDrop — Filmmaker SaaS Platform
 
-> **Gumroad for indie filmmakers.** Upload a film, set a price, keep 85%. We handle hosting, streaming, and direct payouts.
+> **Gumroad for indie filmmakers.** Upload a film, set a price, keep 85%. We handle hosting, streaming, and direct payouts.  
+> 🌐 **Live App**: [https://web-mu-one-15.vercel.app](https://web-mu-one-15.vercel.app)
 
 [![Live on Vercel](https://img.shields.io/badge/Vercel-Live_Production-000000?style=for-the-badge&logo=vercel)](https://web-mu-one-15.vercel.app)
 [![CI Pipeline](https://img.shields.io/badge/GitHub_Actions-Passing-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/26BB/filmmaker-saas/actions)
@@ -8,15 +9,9 @@
 
 ---
 
-## 🚀 Live Demo & Production Links
+## 🚀 Live App
 
-- 🌐 **Live Website**: [https://web-mu-one-15.vercel.app](https://web-mu-one-15.vercel.app)
-- 🍿 **Browse Premieres**: [https://web-mu-one-15.vercel.app/browse](https://web-mu-one-15.vercel.app/browse)
-- 🎞️ **Sample Film Detail Page**: [https://web-mu-one-15.vercel.app/film/neon-solitude](https://web-mu-one-15.vercel.app/film/neon-solitude)
-- 🎥 **Watch Room Player**: [https://web-mu-one-15.vercel.app/watch/neon-solitude](https://web-mu-one-15.vercel.app/watch/neon-solitude)
-- 🎬 **Filmmaker Creator Studio**: [https://web-mu-one-15.vercel.app/dashboard](https://web-mu-one-15.vercel.app/dashboard)
-- 💳 **Stripe Payouts Portal**: [https://web-mu-one-15.vercel.app/dashboard/payouts](https://web-mu-one-15.vercel.app/dashboard/payouts)
-- 📚 **Viewer Library**: [https://web-mu-one-15.vercel.app/library](https://web-mu-one-15.vercel.app/library)
+👉 **[https://web-mu-one-15.vercel.app](https://web-mu-one-15.vercel.app)**
 
 ---
 
