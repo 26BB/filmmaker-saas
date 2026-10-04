@@ -49,6 +49,7 @@ This file is read by all AI agents working on this codebase. Rules here are **ma
 - **DRM for MVP**: Cloudflare signed URLs only (2hr expiry). Widevine/FairPlay is v2.
 - **Upload limit**: 2 GB/film for MVP.
 - **Stack**: Next.js 15 App Router · Supabase · Cloudflare Stream · Razorpay (India) + Stripe (international) · Tailwind + shadcn/ui · Vercel.
+- **🏢 Agent Hub Office & Continuous Memory**: Every multi-agent session MUST maintain the live communication board at `docs/AGENTS_HUB.md` and record operational learnings and heuristics in `AGENTS_MEMORY.md`. All subagents (builders, testers, fixers) communicate and cross-verify before committing.
 
 ---
 
