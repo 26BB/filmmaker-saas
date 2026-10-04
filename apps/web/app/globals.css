@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 228 28% 4%;     /* #08090e deep obsidian */
+    --foreground: 210 40% 98%;    /* #f8fafc */
+    --card: 228 24% 8%;          /* #0f131d */
+    --card-foreground: 210 40% 98%;
+    --popover: 228 24% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 38 92% 50%;        /* #f59e0b cinematic amber */
+    --primary-foreground: 228 28% 4%;
+    --secondary: 226 20% 14%;     /* #1b2130 */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 226 18% 18%;         /* #242c3d */
+    --muted-foreground: 215 20% 65%; /* #94a3b8 */
+    --accent: 43 96% 56%;         /* #fbbf24 warm gold */
+    --accent-foreground: 228 28% 4%;
+    --destructive: 0 84% 60%;     /* #ef4444 */
+    --destructive-foreground: 210 40% 98%;
+    --border: 226 18% 16%;        /* #1f2738 */
+    --input: 226 18% 16%;
+    --ring: 38 92% 50%;
+    --radius: 0.75rem;
+  }
+}
+
+body {
+  background-color: #08090e;
+  color: #f8fafc;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  overflow-x: hidden;
+}
+
+/* Custom Cinematic Utilities */
+.glass-panel {
+  background: rgba(15, 19, 29, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-amber {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 19, 29, 0.6) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.amber-glow {
+  box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.35);
+}
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 40%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aspect-poster {
+  aspect-ratio: 2 / 3;
+}
+
+.aspect-cinema {
+  aspect-ratio: 2.39 / 1;
+}
+
+:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 3px;
+}
