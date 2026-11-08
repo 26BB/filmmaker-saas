@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
-    "test": "echo \"All unit and backend tests passed\" && exit 0"
+    "test": "node --experimental-strip-types --test tests/revenue-split.test.ts tests/razorpay.test.ts tests/cloudflare-stream.test.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

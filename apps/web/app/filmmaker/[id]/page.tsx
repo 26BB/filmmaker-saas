@@ -28,6 +28,8 @@ export default function FilmmakerProfilePage() {
         directorName: "Kaelen Vance",
         priceBuyCents: 1499,
         priceRentCents: 499,
+        priceInrRent: 99,
+        priceInrBuy: 299,
         ratingBadge: "Cannes 2024",
       },
       {

@@ -13,6 +13,10 @@
 
 👉 **[https://web-mu-one-15.vercel.app](https://web-mu-one-15.vercel.app)**
 
+[![FilmDrop Platform Live Application](./docs/screenshots/live-preview.png)](https://web-mu-one-15.vercel.app)
+
+*FilmDrop cinematic storefront: independent film streaming, Stripe Connect creator payouts, and Cloudflare Stream 4K video infrastructure.*
+
 ---
 
 ## 🚨 Market Opportunity

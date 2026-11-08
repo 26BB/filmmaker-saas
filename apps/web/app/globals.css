@@ -1,72 +1,111 @@
+/* Hallmark stamp: filmdrop-light v1.0.0 | light-minimal | editorial-cinema-gazette */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 228 28% 4%;     /* #08090e deep obsidian */
-    --foreground: 210 40% 98%;    /* #f8fafc */
-    --card: 228 24% 8%;          /* #0f131d */
-    --card-foreground: 210 40% 98%;
-    --popover: 228 24% 8%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 38 92% 50%;        /* #f59e0b cinematic amber */
-    --primary-foreground: 228 28% 4%;
-    --secondary: 226 20% 14%;     /* #1b2130 */
-    --secondary-foreground: 210 40% 98%;
-    --muted: 226 18% 18%;         /* #242c3d */
-    --muted-foreground: 215 20% 65%; /* #94a3b8 */
-    --accent: 43 96% 56%;         /* #fbbf24 warm gold */
-    --accent-foreground: 228 28% 4%;
-    --destructive: 0 84% 60%;     /* #ef4444 */
-    --destructive-foreground: 210 40% 98%;
-    --border: 226 18% 16%;        /* #1f2738 */
-    --input: 226 18% 16%;
+    --background: 0 0% 98%;        /* #FAFAFA light gallery canvas */
+    --foreground: 222 47% 11%;     /* #0F172A rich carbon black */
+    --card: 0 0% 100%;             /* #FFFFFF */
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 38 92% 50%;         /* #D97706 warm amber / tungsten gold */
+    --primary-foreground: 222 47% 11%;
+    --secondary: 210 40% 96%;      /* #F1F5F9 */
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;/* #64748B */
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;         /* #E2E8F0 */
+    --input: 214 32% 91%;
     --ring: 38 92% 50%;
     --radius: 0.75rem;
+
+    /* Hallmark Floor Tokens */
+    --border-hairline: #E2E8F0;
+    --border-focus: #D97706;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
   }
 }
 
-body {
-  background-color: #08090e;
-  color: #f8fafc;
+html, body {
+  background-color: #FAFAFA;
+  color: #0F172A;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Cinematic Utilities */
+/* Hallmark Floor: Focus Visible standard */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Tabular Numerals for Pricing & Box Office */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-mono);
+}
+
+/* Custom Cinematic Light Utilities */
 .glass-panel {
-  background: rgba(15, 19, 29, 0.75);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
 }
 
 .glass-panel-amber {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 19, 29, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.06) 0%, rgba(255, 255, 255, 0.95) 100%);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(217, 119, 6, 0.05);
 }
 
 .amber-glow {
-  box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 4px 20px -2px rgba(217, 119, 6, 0.15);
 }
 
 .text-gradient-amber {
-  background: linear-gradient(135deg, #ffffff 0%, #fef3c7 40%, #f59e0b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #B45309;
 }
 
-.aspect-poster {
-  aspect-ratio: 2 / 3;
+/* Hallmark Floor Rule 7: Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-.aspect-cinema {
-  aspect-ratio: 2.39 / 1;
-}
 
-:focus-visible {
-  outline: 2px solid #f59e0b;
-  outline-offset: 3px;
+/* ==========================================================================
+   FilmDrop Mobile Responsive Hardening (<= 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .hero-heading {
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .nav-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  /* Safe tap target area */
+  button, a {
+    touch-action: manipulation;
+  }
 }

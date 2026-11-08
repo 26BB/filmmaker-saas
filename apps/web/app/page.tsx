@@ -16,6 +16,8 @@ const FEATURED_FILMS = [
     directorName: "Kaelen Vance",
     priceBuyCents: 1499,
     priceRentCents: 499,
+    priceInrRent: 99,
+    priceInrBuy: 299,
     ratingBadge: "Cannes Official Selection",
   },
   {
@@ -90,19 +92,18 @@ export default function HomePage() {
   return (
     <div className="flex flex-col space-y-24 pb-20">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32">
-        <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+      <section className="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 bg-white border-b border-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold text-amber-400 mb-8 backdrop-blur-md">
+          <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50 px-4 py-1.5 text-xs font-semibold text-amber-800 mb-8 shadow-sm">
             <span>✨ The Direct TVOD Platform for Independent Filmmakers</span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white max-w-5xl mx-auto leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-slate-900 max-w-5xl mx-auto leading-[1.1]">
             Sell your cinema <br />
-            <span className="text-gradient-amber">directly to your audience.</span>
+            <span className="text-amber-600">directly to your audience.</span>
           </h1>
 
-          <p className="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Upload your film, set your own rental or purchase price, and keep 85% of every sale. Platform handles 4K streaming, DRM protection, and instant Stripe payouts.
           </p>
 
@@ -116,22 +117,22 @@ export default function HomePage() {
           </div>
 
           {/* Value Stats */}
-          <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4 max-w-4xl mx-auto border-t border-slate-800/80 pt-10">
+          <div className="mt-16 grid grid-cols-2 gap-4 md:grid-cols-4 max-w-4xl mx-auto border-t border-slate-200 pt-10">
             <div>
-              <p className="text-3xl font-black text-amber-400">85%</p>
-              <p className="text-xs text-slate-400 mt-1">Creator Revenue Cut</p>
+              <p className="text-3xl font-black text-amber-600 font-mono tabular-nums">85%</p>
+              <p className="text-xs text-slate-500 mt-1">Creator Revenue Cut</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-white">4K UHD</p>
-              <p className="text-xs text-slate-400 mt-1">Cloudflare Stream Edge</p>
+              <p className="text-3xl font-black text-slate-900 font-mono tabular-nums">4K UHD</p>
+              <p className="text-xs text-slate-500 mt-1">Cloudflare Stream Edge</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-amber-400">Instant</p>
-              <p className="text-xs text-slate-400 mt-1">Stripe Direct Transfers</p>
+              <p className="text-3xl font-black text-amber-600 font-mono tabular-nums">Instant</p>
+              <p className="text-xs text-slate-500 mt-1">Stripe Direct Transfers</p>
             </div>
             <div>
-              <p className="text-3xl font-black text-white">$0</p>
-              <p className="text-xs text-slate-400 mt-1">Upfront Hosting Cost</p>
+              <p className="text-3xl font-black text-slate-900 font-mono tabular-nums">$0</p>
+              <p className="text-xs text-slate-500 mt-1">Upfront Hosting Cost</p>
             </div>
           </div>
         </div>
@@ -141,10 +142,10 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Featured Drops</h2>
-            <p className="text-sm text-slate-400 mt-1">Award-winning cinema streaming directly on FilmDrop</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">Featured Drops</h2>
+            <p className="text-sm text-slate-500 mt-1">Award-winning cinema streaming directly on FilmDrop</p>
           </div>
-          <Link href="/browse" className="text-sm font-semibold text-amber-400 hover:text-amber-300">
+          <Link href="/browse" className="text-sm font-semibold text-amber-700 hover:text-amber-800">
             View All →
           </Link>
         </div>
@@ -158,43 +159,43 @@ export default function HomePage() {
 
       {/* Why FilmDrop vs Traditional / Vimeo OTT Comparison */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full">
-        <div className="rounded-3xl border border-slate-800 bg-slate-900/60 p-8 sm:p-12 backdrop-blur-xl">
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 sm:p-12 shadow-sm">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl font-bold text-white">Why Filmmakers Choose FilmDrop</h2>
-            <p className="text-slate-400 mt-2">Compare how we stack up against traditional aggregators and high-fee OTT tools.</p>
+            <h2 className="text-3xl font-bold text-slate-900">Why Filmmakers Choose FilmDrop</h2>
+            <p className="text-slate-500 mt-2">Compare how we stack up against traditional aggregators and high-fee OTT tools.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800">
-              <h3 className="text-lg font-bold text-slate-300">Traditional Distributors</h3>
-              <p className="text-2xl font-bold text-red-400 mt-2">15% - 30%</p>
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-800">Traditional Distributors</h3>
+              <p className="text-2xl font-bold text-rose-600 mt-2 font-mono tabular-nums">15% - 30%</p>
               <p className="text-xs text-slate-500">Filmmaker keeps after middleman cuts</p>
-              <ul className="mt-4 space-y-2 text-xs text-slate-400">
+              <ul className="mt-4 space-y-2 text-xs text-slate-600">
                 <li>❌ 12-24 month payout delays</li>
                 <li>❌ No access to customer emails</li>
                 <li>❌ Multi-year lock-in contracts</li>
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800">
-              <h3 className="text-lg font-bold text-slate-300">Vimeo OTT / Aggregators</h3>
-              <p className="text-2xl font-bold text-amber-400 mt-2">$500+/mo</p>
+            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-800">Vimeo OTT / Aggregators</h3>
+              <p className="text-2xl font-bold text-amber-700 mt-2 font-mono tabular-nums">$500+/mo</p>
               <p className="text-xs text-slate-500">High monthly subscription fees</p>
-              <ul className="mt-4 space-y-2 text-xs text-slate-400">
+              <ul className="mt-4 space-y-2 text-xs text-slate-600">
                 <li>❌ Expensive upfront setup</li>
                 <li>❌ High churn risk</li>
                 <li>❌ Clunky audience onboarding</li>
               </ul>
             </div>
 
-            <div className="p-6 rounded-2xl bg-gradient-to-b from-amber-500/20 to-slate-950/90 border border-amber-500/50 shadow-xl shadow-amber-500/10">
+            <div className="p-6 rounded-2xl bg-amber-50/60 border border-amber-300 shadow-md">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-bold text-white">FilmDrop</h3>
-                <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-neutral-950">WINNER</span>
+                <h3 className="text-lg font-bold text-slate-900">FilmDrop</h3>
+                <span className="rounded-full bg-amber-500 px-2 py-0.5 text-[10px] font-bold text-white">WINNER</span>
               </div>
-              <p className="text-2xl font-bold text-emerald-400 mt-2">85% Net</p>
-              <p className="text-xs text-slate-400">Direct creator take-home</p>
-              <ul className="mt-4 space-y-2 text-xs text-slate-200">
+              <p className="text-2xl font-bold text-emerald-700 mt-2 font-mono tabular-nums">85% Net</p>
+              <p className="text-xs text-slate-600">Direct creator take-home</p>
+              <ul className="mt-4 space-y-2 text-xs text-slate-700">
                 <li>✓ Instant Stripe Connect payouts</li>
                 <li>✓ Direct viewer relationship</li>
                 <li>✓ Free to upload, pay only when you sell</li>
